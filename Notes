@@ -1,0 +1,11 @@
+Selenium & Headless Mode:
+The script uses Selenium with headless Chrome (via webdriver-manager) to interact with the website.
+
+Dynamic Waits & Error Handling:
+The scraper waits for page elements to load and logs errors if elements are not found.
+
+Customization:
+You may need to adjust the CSS selectors in main.py if the website layout changes or if more fields are needed.
+
+Merging Logic:
+The merging in the script uses a common column (assumed as "Tank_ID"). Adjust the merge keys as required by the CSV file structures.
