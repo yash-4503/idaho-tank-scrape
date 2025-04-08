@@ -1,0 +1,21 @@
+Pagination Support:
+I’ve updated the scraper to loop through pages by detecting a “Next” button. If a “Next” button exists and isn’t disabled, the scraper clicks it and continues to collect data until no further pages exist.
+
+Robust Data Extraction:
+The code now expects at least five columns in the results table (adjust the indices if the actual structure differs). The indices are set to extract:
+
+Tank_ID (Column 0)
+
+Facility Name (Column 1)
+
+Status (Column 2)
+
+Cleanup Method (Column 3)
+
+Address (Column 4)
+
+Merging CSV Data:
+Once data is scraped, it is merged with the three provided CSV files (listing-data.csv, tanks-data.csv, and lust-events-data.csv) using "Tank_ID" as the common key. Any unnecessary columns (e.g., “Deleted”) are removed.
+
+##Outcome:
+This enhanced script should now capture the previously missing facilities and Lust events by processing all available pages and using flexible selectors. It also enriches the final output with the requested columns, ensuring that the final CSV is comprehensive.
